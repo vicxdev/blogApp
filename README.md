@@ -5,11 +5,17 @@
 
 # Installation
 1. Clone the repository
-2. Install dependencies
+2. Install server dependencies
 ```bash
+cd server
 npm install
 ```
-3. Copy the file .envsample and rename it to .env
+4. Install client dependencies
+```bash
+cd client
+npm install
+```
+3. Copy .envsample file and rename it to .env (/server and /client use different files)
 4. Create a database in PostgreSQL and fill the variables in .env
 5. Run server
 ```bash
