@@ -3,7 +3,7 @@ import { sequelize } from './database/database.js';
 
 async function main() {
     try {
-        await sequelize.sync({ force: true });
+        await sequelize.sync();
         const PORT = process.env.PORT || 3001;
         app.listen(PORT, () => {
             console.log(`Server is listening on port ${PORT}`);
