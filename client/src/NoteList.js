@@ -4,7 +4,7 @@ import axios from 'axios';
 const NoteList = ({ apiUrl, notes, setNotes, editedNotes, setEditedNotes, totalPages, currentPage, setCurrentPage, fetchNotes }) => {
     useEffect(() => {
         fetchNotes();
-    }, []);
+    }, [currentPage]);
 
     const handleEditNote = (noteId) => {
         setEditedNotes((prevEditedNotes) => ({
@@ -27,7 +27,12 @@ const NoteList = ({ apiUrl, notes, setNotes, editedNotes, setEditedNotes, totalP
                 },
             });
             
-            fetchNotes();
+            // If image changed, reload
+            if (editedNotes[noteId]?.image) {
+                return window.location.reload();
+            } else {
+                fetchNotes();
+            }
         } catch (error) {
             console.log('Error saving note:', error);
         }
