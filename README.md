@@ -1,3 +1,11 @@
+# Comments/Improvements:
+- I would add a more secure login method, as well as verify that the field meets some requirements
+- In larger projects, I would use migrations instead of sync(), because it can lead to data loss.
+- I would improve the 'try & catch's to handle more specific cases and be able to return responses to the user more in line with the errors that arise
+- If we were using microservices, the media folder could go outside of client and server
+- On the React side, I would componentize most of the HTML, like the modal, the NavBar, etc.
+- Also in React, I would remove refreshes and use states to make it more dynamic
+
 # Requisites
 - Node JS v18.16.0
 - NPM v9.5.1
