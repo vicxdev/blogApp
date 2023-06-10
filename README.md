@@ -1,3 +1,16 @@
+# How does it work?
+## Node
+- The 'npm run start' is executed
+- In database.js the connections to the database with the Sequelize are defined
+- An instance of Express is initialized in app.js and its routes and middlewares are defined there (the routes point to the note controllers and users)
+- Sequelize models are synchronized with the database in index.js/main() and the server runs
+
+## React
+- The 'npm run start' is executed
+- The 'react-scripts start' utility is executed and this starts the development server
+- The 'App' component is called in index.js
+- The 'App' component handles the pagination and notes states, in order to pass the results to the 'NoteList' (where notes are listed and edited) and 'NoteAddForm' (where notes are added) components. It also handles the state of the user to be able to pass its result to the component 'LoginForm'
+
 # Comments/Improvements
 - I would add a more secure login method, as well as verify that the field meets some requirements
 - In larger projects, I would use migrations instead of sync(), because it can lead to data loss.
