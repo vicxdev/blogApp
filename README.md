@@ -1,4 +1,4 @@
-# Comments/Improvements:
+# Comments/Improvements
 - I would add a more secure login method, as well as verify that the field meets some requirements
 - In larger projects, I would use migrations instead of sync(), because it can lead to data loss.
 - I would improve the 'try & catch's to handle more specific cases and be able to return responses to the user more in line with the errors that arise
